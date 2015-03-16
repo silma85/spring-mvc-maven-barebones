@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="ISO-8859-1"></meta>
-	<title>This is title</title>
+	<title>Socket testing facility</title>
 	<style>
 	<!--
 		*, html {}
@@ -13,6 +13,6 @@
 <body th:inline="text">
 	<a th:href="@{/call/__${url}__/__${port}__}">Click to send XML to socket</a>
 	<p>Received:</p>
-	[[${message != null ? message : 'N/A'}]]
+	<p th:if="${message}" class="green">[[${message ? 'Ok!' : 'Server up, but got connection error.'}]]</p>
 </body>
 </html>
