@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"></meta>
+	<title>This is title</title>
+	<style>
+	<!--
+		*, html {}
+		body { font: 10pt Verdana, Tahoma, sans-serif; }
+	-->
+	</style>
+</head>
+<body th:inline="text">
+	<a th:href="@{/call/__${url}__/__${port}__}">Click to send XML to socket</a>
+	<p>Received:</p>
+	[[${message != null ? message : 'N/A'}]]
+</body>
+</html>
